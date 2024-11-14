@@ -3,7 +3,7 @@ version: "3.8"
 services:
   nginx:
     build: ./nginx
-    image: "docker pull irfan845/notes-app:latest"
+    image: "irfan845/notes-app:latest"
     container_name: "nginx_cont"
     ports:
       - "80:80"
