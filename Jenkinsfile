@@ -11,8 +11,10 @@ pipeline{
         }
         stage("Code Build"){
             steps{
+                script{
             docker.build("notes-app","latest")
             }
+        }
         }
         stage("Push to DockerHub"){
             steps{
