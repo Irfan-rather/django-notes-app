@@ -1,3 +1,4 @@
+
 @Library('Shared') _
 pipeline{
     agent { label 'vagrant'}
@@ -5,9 +6,11 @@ pipeline{
     stages{
         stage("Code clone"){
             steps{
+                script{
             sh "whoami"
             clone("https://github.com/Irfan-rather/django-notes-app.git","main")
             }
+        }
         }
         stage("Code Build"){
             steps{
@@ -25,9 +28,11 @@ pipeline{
         }
         stage("Deploy"){
             steps{
+                script{
                 deploy()
             }
         }
         
     }
+}
 }
