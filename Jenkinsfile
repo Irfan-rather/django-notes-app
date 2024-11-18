@@ -30,7 +30,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 script{
-                deploy()
+                deploy("notes-app","latest","irfan845")
             }
         }
         
