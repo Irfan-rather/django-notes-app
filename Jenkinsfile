@@ -8,6 +8,7 @@ pipeline{
             steps{
                 script{
             sh "whoami"
+                    sh "pwd"
             clone("https://github.com/Irfan-rather/django-notes-app.git","main")
             }
         }
