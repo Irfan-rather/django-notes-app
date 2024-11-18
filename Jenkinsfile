@@ -30,6 +30,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 script{
+                    sh "echo:successfully"
                 deploy("notes-app","latest","irfan845")
             }
         }
