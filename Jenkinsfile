@@ -16,7 +16,7 @@ pipeline{
         stage("Code Build"){
             steps{
                 script{
-            docker.build("${DockerHubUser}","notes-app","latest")
+            docker.build("notes-app:latest", ".")
             }
         }
         }
