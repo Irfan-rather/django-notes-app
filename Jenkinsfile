@@ -18,8 +18,10 @@ pipeline{
         }
         stage("Push to DockerHub"){
             steps{
+                script{
                 docker.push("dockerHubCreds","notes-app","latest")
             }
+        }
         }
         stage("Deploy"){
             steps{
