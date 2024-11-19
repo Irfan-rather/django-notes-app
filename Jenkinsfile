@@ -16,7 +16,7 @@ pipeline{
         stage("Code Build"){
             steps{
                 script{
-            docker.build( "irfan845","notes-app:latest", ".")
+            docker.build( "dockerHubcred","notes-app", "latest .")
             }
         }
         }
