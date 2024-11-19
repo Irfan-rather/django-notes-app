@@ -32,7 +32,7 @@ pipeline{
                 script{
                   
                 deploy()
-                      sh "echo:successfully"
+                   
             }
         }
         
