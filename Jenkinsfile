@@ -16,14 +16,14 @@ pipeline{
         stage("Code Build"){
             steps{
                 script{
-            docker.build("notes-app:latest", ".")
+            docker.build( "irfan845","notes-app:latest", ".")
             }
         }
         }
         stage("Push to DockerHub"){
             steps{
                 script{
-               docker_push("notes-app","latest","dockerHubcreds")
+               docker_push("notes-app","latest","irfan845")
             }
         }
         }
