@@ -30,7 +30,7 @@ pipeline{
             steps{
                 script{
                   sh "done"
-                deploy()
+                docker_deploy()
                    
             }
         }
